@@ -1,0 +1,12 @@
+ Dim objZipRet As Object
+        Dim objZipRadius As New ZipCode.clsRadius
+        objZipRet = objZipRadius.GetZipsInRadius(52722, 15)
+        If objZipRet.ToString = "System.Collections.ArrayList" Then
+            Dim iZip As Integer
+            For iZip = 0 To objZipRet.Count - 1
+                Debug.Print(objZipRet(iZip))
+            Next
+        Else
+            Debug.Print(objZipRet)
+        End If
+        Debug.Print("Complete")
